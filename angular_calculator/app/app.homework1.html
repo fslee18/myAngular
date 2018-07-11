@@ -1,0 +1,29 @@
+<div>
+    <h1>COMP 2909 Angular Homework 1: Angular Calculator</h1>
+    <p>Sum:</p>
+    <p><input type="text" [(ngModel)]="sumfact1" #sum1="ngModel" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required > + 
+        <input type="text" [(ngModel)]="sumfact2" #sum2="ngModel" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required >
+         <button [disabled]="!sum1.valid||!sum2.valid" (click)="doAddition()">=</button></p>
+    <h3 *ngIf="sum1?.errors?.pattern || sum2?.errors?.pattern">Invalid input</h3>
+    <h3 *ngIf="sum1?.valid && sum2?.valid">{{sumfact1}} + {{sumfact2}} = {{resultsum}} </h3>
+    <p>Difference:</p>
+    <p><input type="text" [(ngModel)]="diffact1" #diff1="ngModel" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required > - 
+        <input type="text" [(ngModel)]="diffact2" #diff2="ngModel" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required > 
+        <button [disabled]="!diff1.valid||!diff2.valid"  (click)="doDiff()">=</button></p>
+        <h3 *ngIf="diff1?.errors?.pattern || diff2?.errors?.pattern">Invalid input</h3>
+        <h3 *ngIf="diff1?.valid && diff2?.valid">{{diffact1}} - {{diffact2}} = {{resultdif}}</h3>
+    <p>Product:</p>
+    <p><input type="text" [(ngModel)]="profact1" #pro1="ngModel" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required > * 
+        <input type="text" [(ngModel)]="profact2" #pro2="ngModel" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required > 
+        <button [disabled]="!pro1.valid||!pro2.valid"  (click)="doProduct()">=</button></p>
+        <h3 *ngIf="pro1?.errors?.pattern || proo2?.errors?.pattern">Invalid input</h3>
+    <h3 *ngIf="pro1?.valid && pro2?.valid">{{profact1}} * {{profact2}} = {{resultpro}} </h3>
+    <p>Quotient:</p>
+    <p><input type="text" [(ngModel)]="quofact1" #quo1="ngModel" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required > / 
+        <input type="text" [(ngModel)]="quofact2" #quo2="ngModel" pattern="^[+-]*[0-9]*[\.]?[0-9]*$" required > 
+        <button [disabled]="!quo1.valid||!quo2.valid"  (click)="doQuotient()">=</button></p>
+        <h3 *ngIf="quo1?.errors?.pattern || quo2?.errors?.pattern">Invalid input</h3>
+        <h3 *ngIf="quo1?.valid && quo2?.valid">{{quofact1}} / {{quofact2}} = {{resultquo}} </h3>
+
+
+</div>
