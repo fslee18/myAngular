@@ -1,0 +1,3 @@
+Create an Angular-Ionic applications:
+It reads and displays data asynchronously from Yahoo weather API and display in the apps.
+Display Profile and edit it.
