@@ -1,0 +1,1 @@
+This application performs GET and POST calls to remote server to request temperature conversion data and to submit feedback.  
